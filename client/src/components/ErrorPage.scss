@@ -1,5 +1,17 @@
 @import '../scss/styles.scss';
 
 .error-page {
-    
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $font-primary;
+    font-size: 20px;
+
+    a {
+        &:hover {
+            color: $font-secondary;
+        }
+    }
 }

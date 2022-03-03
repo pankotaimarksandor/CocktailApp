@@ -20,7 +20,6 @@ const CocktailDetails = () => {
             })
             .then(cocktail => {
                 setCocktail(cocktail)
-                console.log(cocktail)
                 setLoading(false)
             })
             .catch(error => {

@@ -52,9 +52,9 @@ const SearchPage = () => {
                 </form>
             </div>
             {loading && cocktails.length === 0 && <h2>Loading..</h2>}
-            {!loading && cocktails.length === 0 && <h2>Coctail(s) not found</h2>}
+            {!loading && cocktails.length === 0 && <h2>Cocktail(s) not found</h2>}
             {!loading && cocktails.length > 0 && (
-                <CocktailListing cocktails={cocktails}/>
+                <CocktailListing cocktails={cocktails} name='Cocktail(s)'/>
             )}
         </div>
     )

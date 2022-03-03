@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import CocktailCard from './CocktailCard'
+import CocktailListing from './CocktailListing'
 import './RandomPage.scss'
 
 const RandomPage = () => {
-    const [randomCocktail, setRandomCocktail] = useState({})
+    const [randomCocktails, setRandomCocktails] = useState([])
 
     useEffect(() => {
         getRandomCocktail()
@@ -20,7 +20,7 @@ const RandomPage = () => {
                 }
             })
             .then(cocktail => {
-                setRandomCocktail(cocktail)
+                setRandomCocktails([...randomCocktails, cocktail])
             })
             .catch(error => {
                 console.log(error)
@@ -29,14 +29,13 @@ const RandomPage = () => {
 
     return (
         <div className='random-page'>
-            <div className='title'>Random cocktail</div>
             <div className='cocktail'>
-                {Object.keys(randomCocktail).length === 0 && <div className='loading'>Loading..</div>}
-                {Object.keys(randomCocktail).length > 0 && (
-                    <CocktailCard data={randomCocktail}/>
+                {randomCocktails.length === 0 && <div className='loading'>Loading..</div>}
+                {randomCocktails.length > 0 && (
+                    <CocktailListing cocktails={randomCocktails} name='Random cocktail(s)'/>
                 )}
             </div>
-            <button onClick={() => getRandomCocktail()}>New random</button>
+            <button onClick={() => getRandomCocktail()}>Add new random</button>
         </div>
     )
 }

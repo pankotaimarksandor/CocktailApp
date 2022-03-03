@@ -3,12 +3,12 @@ import CocktailCard from './CocktailCard'
 import './CocktailListing.scss'
 
 const CocktailListing = (props) => {
-    const { cocktails } = props
+    const { cocktails, name } = props
 
     return (
         <div className='cocktail-listing'>
             <div className='list'>
-                <h2>Cocktail(s)</h2>
+                <h2>{name}</h2>
                 <div className='container'>
                     {cocktails.map((cocktail, i) => (
                         <CocktailCard key={i} data={cocktail}/>

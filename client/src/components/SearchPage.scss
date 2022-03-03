@@ -1,12 +1,17 @@
 @import '../scss/styles.scss';
 
 .search-page {
+    padding: 40px;
+
+    h2 {
+        color: $font-primary;
+    }
 
     .search-bar {
         width: 100%;
         display: flex;
         justify-content: center;
-        padding: 20px;
+        padding: 0 40px 40px 40px;
       
         form {
             display: flex;
