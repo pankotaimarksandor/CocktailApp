@@ -29,11 +29,13 @@ const RandomPage = () => {
 
     return (
         <div className='random-page'>
-            <h2>Random cocktail</h2>
-            {Object.keys(randomCocktail).length === 0 && <div className='loading'>Loading..</div>}
-            {Object.keys(randomCocktail).length > 0 && (
-                <CocktailCard data={randomCocktail}/>
-            )}
+            <div className='title'>Random cocktail</div>
+            <div className='cocktail'>
+                {Object.keys(randomCocktail).length === 0 && <div className='loading'>Loading..</div>}
+                {Object.keys(randomCocktail).length > 0 && (
+                    <CocktailCard data={randomCocktail}/>
+                )}
+            </div>
             <button onClick={() => getRandomCocktail()}>New random</button>
         </div>
     )

@@ -1,5 +1,33 @@
 @import '../scss/styles.scss';
 
 .search-page {
-    
+
+    .search-bar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      
+        form {
+            display: flex;
+            justify-content: center;
+            width: 400px;
+
+            button {
+                padding: 0px 8px;
+                font-size: 20px;
+                cursor: pointer;
+                height: 38px;
+            }
+        }
+      
+        input {
+            font-size: 18px;
+            width: 100%;
+            padding: 5px 5px 5px 10px;
+            height: 38px;
+            outline: none;
+            border: none;
+        }
+    }
 }

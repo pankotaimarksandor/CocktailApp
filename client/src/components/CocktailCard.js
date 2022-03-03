@@ -8,8 +8,16 @@ const CocktailCard = (props) => {
     return (
         <div className='cocktail-card'>
             <Link to={`/cocktail/details/${data.id}`}>
-                {data.name}
-                <img src={data.thumb} alt={data.name}/>
+                <div className="card-inner">
+                    <div className="card-top">
+                        <img src={data.thumb} alt={data.name} />
+                    </div>
+                    <div className="card-bottom">
+                        <div className="card-info">
+                            <h3>{data.name}</h3>
+                        </div>
+                    </div>
+                </div>
             </Link>
         </div>
     )

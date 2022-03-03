@@ -1,5 +1,18 @@
 @import '../scss/styles.scss';
 
-.cocktail-listing {
-    
+.cocktail-listing,
+.list {
+    padding: 0 40px 20px 40px;
+
+    h2 {
+        color: $font-secondary;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-gap: 15px;
+    }
 }

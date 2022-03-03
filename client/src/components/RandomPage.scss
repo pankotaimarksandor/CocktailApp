@@ -1,5 +1,18 @@
 @import '../scss/styles.scss';
 
 .random-page {
+    color: $font-primary;
+    height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    
+    .title {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
     
 }

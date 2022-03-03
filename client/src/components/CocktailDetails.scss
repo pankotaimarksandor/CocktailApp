@@ -1,5 +1,36 @@
 @import '../scss/styles.scss';
 
 .cocktail-details {
-    
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 40px;
+    color: $font-primary;
+    font-weight: 400;
+
+    .title {
+        font-size: 40px;
+        color: $font-primary;
+    }
+
+    .cocktail-info > div span:first-child {
+        padding: 10px 0px;
+        color: $font-secondary;
+        font-weight: 600;
+        width: 100px;
+        display: inline-block;
+    }
+
+    .cocktail-info ul {
+        padding-left: 20px;
+    }
+
+    .section-right {
+        margin-left: 30px;
+
+        img {
+            max-height: 500px;
+            max-width: 500px;
+            object-fit: cover;
+        }
+    }
 }

@@ -7,9 +7,14 @@ const CocktailListing = (props) => {
 
     return (
         <div className='cocktail-listing'>
-            {cocktails.map((cocktail, i) => (
-                <CocktailCard key={i} data={cocktail}/>
-            ))}
+            <div className='list'>
+                <h2>Cocktail(s)</h2>
+                <div className='container'>
+                    {cocktails.map((cocktail, i) => (
+                        <CocktailCard key={i} data={cocktail}/>
+                    ))}
+                </div>
+            </div>
         </div>
     )
 }

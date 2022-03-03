@@ -20,6 +20,7 @@ const CocktailDetails = () => {
             })
             .then(cocktail => {
                 setCocktail(cocktail)
+                console.log(cocktail)
                 setLoading(false)
             })
             .catch(error => {
@@ -33,9 +34,36 @@ const CocktailDetails = () => {
         <div className='cocktail-details'>
             {loading && Object.keys(cocktail).length === 0 && <h2>Loading..</h2>}
             {!loading && Object.keys(cocktail).length > 0 && (
-                <div>
-                    {cocktail.name}
+                <>
+                    <div className="section-left">
+                        <div className="title">{cocktail.name}</div>
+                        <div className="cocktail-info">
+                            <div>
+                                <span>Ingredients:</span>
+                                <ul>
+                                    {cocktail.ingredients.map((ingredient, i) => (
+                                        <li key={i}>{ingredient}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div>
+                                <span>Measures:</span>
+                                <ul>
+                                    {cocktail.measures.map((measure, i) => (
+                                        <li key={i}>{measure}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div>
+                                <span>Instructions:</span><br/>
+                                <span>{cocktail.instructions}</span>
+                            </div>
+                        </div>
+                    </div>
+                <div className="section-right">
+                    <img src={cocktail.thumb} alt={cocktail.name} />
                 </div>
+              </>
             )}
         </div>
     )
